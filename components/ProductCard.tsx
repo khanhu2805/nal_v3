@@ -17,7 +17,7 @@ function ProductCard({product}){
               <p className='basis-3/4'>{numberWithCommas(product.price)}</p>
               <p className='basis-1/4'>VNĐ</p>
             </div>
-            <button className='h-fit w-fit mt-5 border-solid border-2 border-orange-400 p-2 rounded-md hover:bg-orange-400 hover:text-white text-black text-lg font-bold'>Thêm vào giỏ hàng</button>
+            <button className='h-fit w-fit mt-5 border-solid border-2 border-orange-400 p-2 rounded-md hover:bg-orange-400 hover:text-white text-black text-lg font-bold hover:rounded-full hover:delay-100'>Thêm vào giỏ hàng</button>
         </div>  
     </Link>
   )}
@@ -33,7 +33,7 @@ function ProductCard({product}){
               <p className=''>VNĐ</p>
             </div>
             <div className='flex justify-center'>
-              <button className='h-fit w-fit mt-5 border-solid border-2 border-orange-400 p-2 rounded-md hover:bg-orange-400 hover:text-white text-black text-lg font-bold'>Thêm vào giỏ hàng</button>
+              <button className='h-fit w-fit mt-5 border-solid border-2 border-orange-400 p-2 rounded-md hover:bg-orange-400 hover:text-white text-black text-lg font-bold hover:rounded-full hover:delay-100'>Thêm vào giỏ hàng</button>
             </div>
         </div>  
     </Link>

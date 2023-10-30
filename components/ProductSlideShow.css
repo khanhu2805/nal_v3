@@ -7,7 +7,7 @@
   .swiper-slide1 {
     background-position: center;
     background-size: cover;
-    width: 100%;
+    width: fit-content;
     height: fit-content;
   }
 

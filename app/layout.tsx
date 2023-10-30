@@ -15,8 +15,7 @@ export const metadata: Metadata = {
     icon:'/favicon.ico',
   }
 }
-export const revalidate = 10
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode

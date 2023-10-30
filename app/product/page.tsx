@@ -5,6 +5,7 @@ import Filter from "@/components/Filter";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+
 export default function Product() {
     const [selectedCategory, setSelectedCategory] = useState<string[]>([]);
     const [selectedSize, setSelectedSize] = useState<string[]>([]);

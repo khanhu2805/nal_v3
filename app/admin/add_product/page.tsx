@@ -1,5 +1,5 @@
+import AddForm from '@/components/AddForm'
 import React from 'react'
-import AddForm from './AddForm'
 
 type Props = {}
 

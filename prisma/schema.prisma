@@ -28,3 +28,12 @@ model User {
   password String
   money Int
 }
+
+model Cart {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  productId String 
+  userId String
+  quanity Int
+  color String
+  size String
+}

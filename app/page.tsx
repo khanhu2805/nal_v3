@@ -3,6 +3,7 @@ import ProductSlideShow from "@/components/ProductSildeShow";
 import { PrismaClient } from "@prisma/client";
 
 
+
 export  default async function HomePage() {
   const product = await new PrismaClient().product.findMany();
   return (

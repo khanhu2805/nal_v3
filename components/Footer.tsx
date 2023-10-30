@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 export default function Footer() {
     if (usePathname().startsWith('/sign_in')) return null;
     if (usePathname().startsWith('/sign_up')) return null;
-    if (usePathname().startsWith('/admin')) return null;
   return (
     <div className='bg-orange-100 w-screen h-fit p-4 flex flex-row'>
         <div className='flex basis-1/3 space-y-2 items-center h-fit'>

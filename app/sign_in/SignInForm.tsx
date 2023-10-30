@@ -11,10 +11,6 @@ const SignInForm = (props: Props) => {
         password:''
     })
     const SignIn = () => {
-        if (user.phone ==='admin' && user.password ==='admin') {
-            router.push('/admin');
-        }
-        else {
             try {
                 signIn('credentials', {
                     phone:user.phone,
@@ -26,8 +22,9 @@ const SignInForm = (props: Props) => {
             catch{
                 console.log('Error')
             }
-        }
+      
     }
+    
   return (
     <div className=" flex h-fit  flex-1 flex-col justify-center px-6 py-12 lg:px-8 ">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
