@@ -1,31 +1,40 @@
 'use client'
-import Category from '@/components/Category'
-import Color from '@/components/Color'
-import ImageUpload from '@/components/ImageUpload'
-import Para from '@/components/Para'
-import Size from '@/components/Size'
 import axios from 'axios'
-import { useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
+import Para from './Para'
+import ImageUpload from './ImageUpload'
+import Size from './Size'
+import Category from './Category'
+import Color from './Color'
+import { useRouter } from 'next/navigation'
 
-type Props = {}
+type Props = {
+    product: any
+}
 
-const AddForm = (props: Props) => {
-    const router = useRouter();
-    const[formData, setFormData] = useState({
-        name:'',
-        desc:`<div></div>`,
-        price: 0,
-        quanity:0,
-        size:'',
-        color:'#0000',
-        img:'',
-        category:'',  
+const Edit = (props: Props) => {
+  const router = useRouter()
+    const [formData, setFormData] = useState({
+        id:props.product.id,
+        name:props.product.name,
+        desc:props.product.desc,
+        price: props.product.price,
+        quanity:props.product.quanity,
+        size:props.product.size,
+        color:props.product.color,
+        img:props.product.img,
+        category:props.product.category
     })
-
     const[desc, setDesc] = useState<string>('');
     const[info, setInfo] = useState<any>();
     const[imageUrls, setImageUrls] = useState<string[]>([]);
+    useEffect(() => {
+      if (formData.img) {
+        const imgUrlArr = formData.img.split(',')
+        setImageUrls(imgUrlArr)
+      }
+    }, [])
+
     const hanldeChange = (e:React.ChangeEvent<HTMLInputElement>) => {
       const {name, value} = e.target
       setFormData({
@@ -53,11 +62,6 @@ const AddForm = (props: Props) => {
     }
 
     useEffect(() => {
-      console.log(formData.img)
-      console.log(formData)
-    }, [formData])
-
-    useEffect(() => {
       setFormData((prev) => ({
         ...prev,
         img:imageUrls.toString(),
@@ -65,19 +69,20 @@ const AddForm = (props: Props) => {
       }))
     }, [imageUrls, desc]);
 
-    const submit = async () => {
+    const updateData = async () => {
       handleImageChange();
-        axios.post('/api/add_product', formData)
-        .then((res) => console.log(res))
-        .catch((err) => console.log(err))
-        .finally(() => {
-          router.push(`/product`)
-        });
-        
+      try {
+        const res = await axios.patch('/api/updateProduct', formData)
+        router.push(`/product`)
+        console.log(res.data)
+      } catch (error) {
+        console.log(error)
+      }
     }
+
   return (
     <div className='h-fit w-fit py-10 mx-40'>
-        <h1 className='text-2xl font-semibold'>THÊM SẢN PHẨM MỚI</h1>
+        <h1 className='text-2xl font-semibold'>CẬP NHẬT SẢN PHẨM</h1>
         <div className='text-black mt-4 '>
           <div className='w-full grid grid-cols-2 gap-10'>
             <div className='space-y-2'>
@@ -156,11 +161,11 @@ const AddForm = (props: Props) => {
             <label htmlFor='desc' className='inline-block mt-10 font-medium'>HÌNH ẢNH SẢN PHẨM</label>
             <ImageUpload info={info} setInfo={setInfo} imageUrls={imageUrls} setImageUrls={setImageUrls} handleImageChange={handleImageChange}/>
             <div className="w-full text-center">
-              <button onClick={submit} className='text-black bg-orange-500 px-5 py-2 rounded-lg border-[1px] shadow-md text-xl font-semibold hover:text-white mt-10'>THÊM SẢN PHẨM</button>
+              <button onClick={updateData} className='text-black bg-orange-500 px-5 py-2 rounded-lg border-[1px] shadow-md text-xl font-semibold hover:text-white mt-10'>CẬP NHẬT SẢN PHẨM</button>
             </div>
         </div>
     </div>
   )
 }
 
-export default AddForm
+export default Edit
