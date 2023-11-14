@@ -40,7 +40,7 @@ const Para: React.FC<Props> = ({setDesc, desc}) => {
   return (
     <div className={`mx-auto border-[1px] mt-4 rounded-xl ${focus ? 'border-orange-500 border-[2px] ml-0':''}`}
     ref={menuRef}>
-        {/* <TextEditor editor={editor}/> */}
+        <TextEditor editor={editor}/>
         <EditorContent editor={editor} style={{padding:'18px'}} onClick={() => setFocus(true)}/>
     </div>
   )
