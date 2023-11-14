@@ -1,8 +1,10 @@
+
 import React from 'react'
 import prisma from '@/app/prismadb'
 import Link from 'next/link'
 import numberWithCommas from '@/number_commas'
 import Delete from './Delete'
+import Payment from './Payment'
 type Props = {
     userId: string
 }
@@ -24,6 +26,7 @@ const CartProduct = async (props: Props) => {
     ))
   
     const cartProduct = await Promise.all(product)
+    const allIds = cart.map((product) => product.productId)
     if (cartProduct.length === 0) {
         return(
             <div className='flex flex-col w-screen h-screen items-center justify-center'>
@@ -35,10 +38,11 @@ const CartProduct = async (props: Props) => {
         )
     }
   return (
-    <div className='mt-20 flex flex-col'>
+    
+    <div className='mt-20 flex flex-col mb-10'>
         <h1 className='text-2xl font-bold w-screen text-center'>GIỎ HÀNG CỦA BẠN</h1>
         {cartProduct.map((product, i) => (
-                <div key={i} className='flex relative items-center mt-20 w-8/12 mx-auto shadow-lg p-5 rounded-lg'>
+                <div key={i} className='flex relative items-center mt-20 w-8/12 mx-auto shadow-xl p-5 rounded-lg border-[1px]'>
                     <Link className='flex relative space-x-5 items-center' href={`/product/${product.id}`}>
                         <img src={product.img.split(',')[0]} className='w-[200px] h-[200px] object-cover object-center'/>
                         <div>
@@ -59,6 +63,10 @@ const CartProduct = async (props: Props) => {
                     </div>
                 </div>     
         ))}
+        <div className='flex justify-center mt-10'>
+            <Payment allIds={allIds} userId={props.userId}/>
+        </div>
+        
     </div>
   )
 }

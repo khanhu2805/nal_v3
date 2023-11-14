@@ -166,6 +166,7 @@ const Filter = (props: Props) => {
                         <div className='flex flex-row justify-center items-center relative'>
                             <input type='number'
                             name='min'
+                            min={0}
                             onChange={handleMinChange}
                             value={props.price.min}
                             className='outline-none border-[1px] text-center rounded-lg py-2 mt-5 focus:border-orange-500'

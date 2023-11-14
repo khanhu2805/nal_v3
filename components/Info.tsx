@@ -61,13 +61,14 @@ const Info = (props: Props) => {
             <h3 className=' text-black font-bold text-lg mt-12'>SỐ LƯỢNG</h3>
             <input className='py-1 w-[100px] outline-none border-[2px] focus:border-orange-500 rounded-lg mt-10 text-base text-center'
             type='number'
+            min={1}
+            max={props.product.quanity}
             value={quanity}
             onChange={handleChangeQuanity}
                />
         </div>
-        <div className='grid grid-cols-2 gap-[60px] mt-10'>
+        <div className='flex justify-center mt-10'>
             <AddCart productId={props.product.id} selectedSize={selectedSize} selectedColor={selectedColor} quanity={quanity}/>
-            <Payment userId={''}/>
         </div>
     </div>
   )

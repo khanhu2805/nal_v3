@@ -16,8 +16,7 @@ export async function POST (req: Request, res: Response) {
                 productId, 
                 userId,
                 size,
-                color,
-                quanity
+                color
             }
         })
         if (existingCartItem) {
