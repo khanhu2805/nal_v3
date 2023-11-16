@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 export default function Product() {
     const [selectedCategory, setSelectedCategory] = useState<string[]>([]);
     const [selectedSize, setSelectedSize] = useState<string[]>([]);
+    const [search, setSearch] = useState<string>();
     const [price, setPrice] = useState({
         min:0,
         max:500000,
@@ -46,7 +47,7 @@ export default function Product() {
         <div className="mb-10 w-screen"> 
             <h2 className="text-xl font-bold w-screen mt-10 text-center">TẤT CẢ SẢN PHẨM</h2>
             <div className="h-fit w-96 mx-auto mt-10">
-                <SearchBar/>
+                <SearchBar search={search} setSearch={setSearch}/>
             </div>
             <div className='flex flex-row mt-20 h-fit '>
                 <div className="basis-2/5 flex flex-row ">

@@ -1,6 +1,9 @@
 import React from 'react'
 
-type Props = {}
+type Props = {
+  search: string,
+  setSearch: React.Dispatch<React.SetStateAction<string>>
+}
 
 const SearchBar = (props: Props) => {
   return (
@@ -12,7 +15,8 @@ const SearchBar = (props: Props) => {
         </button>
         <input type="text" className='outline-none bg-transparent ml-2 caret-black placeholder:font-light placeholder:text-black text-lg' 
         placeholder='Search'
-        autoComplete='false'/>
+        autoComplete='false'
+        onChange={(e)=>props.setSearch(e.target.value)}/>
     </div>
   )
 }
