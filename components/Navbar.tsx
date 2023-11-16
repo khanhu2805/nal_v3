@@ -24,8 +24,7 @@ const Navbar = () => {
                     <div className='ml-40'>
                         <div className='flex space-x-12'>
                             <Link href='/product' className='text-black font-bold text-2xl hover:text-orange-400'>SẢN PHẨM</Link>
-                            <div className='border-r-2 border-black'></div>
-                            <Link href='/contact' className='text-black font-bold text-2xl hover:text-orange-400'>LIÊN HỆ</Link>
+                            
                             <div className='border-r-2 border-black'></div>
                             <Link href='/about' className='text-black font-bold text-2xl hover:text-orange-400'>ABOUT US</Link>
                             <div className='border-r-2 border-black'></div>
@@ -67,8 +66,7 @@ const Navbar = () => {
                     <div className='ml-40'>
                         <div className='flex space-x-12'>
                             <Link href='/product' className='text-black font-bold text-2xl hover:text-orange-400'>SẢN PHẨM</Link>
-                            <div className='border-r-2 border-black'></div>
-                            <Link href='/contact' className='text-black font-bold text-2xl hover:text-orange-400'>LIÊN HỆ</Link>
+                            
                             <div className='border-r-2 border-black'></div>
                             <Link href='/about' className='text-black font-bold text-2xl hover:text-orange-400'>ABOUT US</Link>
                             <div className='border-r-2 border-black'></div>
@@ -103,8 +101,7 @@ const Navbar = () => {
                     <div className='ml-40'>
                         <div className='flex space-x-12'>
                             <Link href='/product' className='text-black font-bold text-2xl hover:text-orange-400'>SẢN PHẨM</Link>
-                            <div className='border-r-2 border-black'></div>
-                            <Link href='/contact' className='text-black font-bold text-2xl hover:text-orange-400'>LIÊN HỆ</Link>
+                            
                             <div className='border-r-2 border-black'></div>
                             <Link href='/about' className='text-black font-bold text-2xl hover:text-orange-400'>ABOUT US</Link>
                             <div className='border-r-2 border-black'></div>
