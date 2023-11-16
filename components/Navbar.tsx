@@ -75,19 +75,12 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className='flex flex-row'>
-                        <div className='flex flex-col space-y-2 ml-20'>
+                        <div className='flex items-center ml-20'>
                             <div className='flex flex-row space-x-4'> 
                                 <svg className='' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 30 30" >
                                     <path fillRule="evenodd" clipRule="evenodd" d="M15 12C16.705 12 18.3401 11.3679 19.5457 10.2426C20.7513 9.11742 21.4286 7.5913 21.4286 6C21.4286 4.4087 20.7513 2.88258 19.5457 1.75736C18.3401 0.632141 16.705 0 15 0C13.295 0 11.6599 0.632141 10.4543 1.75736C9.24872 2.88258 8.57143 4.4087 8.57143 6C8.57143 7.5913 9.24872 9.11742 10.4543 10.2426C11.6599 11.3679 13.295 12 15 12ZM0 30C-2.93527e-08 28.1615 0.387987 26.341 1.14181 24.6424C1.89563 22.9439 3.00052 21.4005 4.3934 20.1005C5.78628 18.8005 7.43986 17.7693 9.25975 17.0657C11.0796 16.3621 13.0302 16 15 16C16.9698 16 18.9204 16.3621 20.7403 17.0657C22.5601 17.7693 24.2137 18.8005 25.6066 20.1005C26.9995 21.4005 28.1044 22.9439 28.8582 24.6424C29.612 26.341 30 28.1615 30 30H0Z" fill="black"/>
                                 </svg>
                                 <span className='text-black font-semibold text-xl -mt-1'>{session.user.name}</span>
-                            </div>
-                            <div className='flex flex-row space-x-4'> 
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-                                <path fillRule="evenodd" clipRule="evenodd" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
-                                </svg>
-                                <span className='text-black font-semibold text-xl -mt-1'>0</span>
-                                <span className='text-black font-semibold text-xl -mt-1'>VNĐ</span>
                             </div>
                         </div>
                         <Link href='/cart' className='ml-20'>
