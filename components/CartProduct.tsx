@@ -27,10 +27,11 @@ const CartProduct = async (props: Props) => {
   
     const cartProduct = await Promise.all(product)
     const allIds = cart.map((product) => product.productId)
+    const allQuanity = cart.map((product) => product.quanity)
     if (cartProduct.length === 0) {
         return(
-            <div className='flex flex-col w-screen h-screen items-center justify-center'>
-                <h1 className='text-2xl font-bold'>CHƯA CÓ SẢN PHẨM TRONG GIỎ HÀNG</h1>
+            <div className='flex flex-col w-screen mt-40 mb-40 items-center justify-center'>
+                <h1 className='text-2xl font-base italic'>CHƯA CÓ SẢN PHẨM TRONG GIỎ HÀNG, THÊM VÔ GIỎ HÀNG ĐI</h1>
                 <Link href='/product' className='hover:shadow-2xl text-xl font-semibold text-orange-500 border-[1px] border-orange-500 rounded-lg p-4 mt-10 hover:bg-orange-500 hover:text-white'>
                     Tới trang sản phẩm
                 </Link>
@@ -39,10 +40,10 @@ const CartProduct = async (props: Props) => {
     }
   return (
     
-    <div className='mt-20 flex flex-col mb-10'>
-        <h1 className='text-2xl font-bold w-screen text-center'>GIỎ HÀNG CỦA BẠN</h1>
+    <div className='flex flex-col mb-10'>
+        
         {cartProduct.map((product, i) => (
-                <div key={i} className='flex relative items-center mt-20 w-8/12 mx-auto shadow-xl p-5 rounded-lg border-[1px]'>
+                <div key={i} className='flex relative items-center mt-20 w-8/12 mx-auto shadow-xl p-5 rounded-xl border-[1px]'>
                     <Link className='flex relative space-x-5 items-center' href={`/product/${product.id}`}>
                         <img src={product.img.split(',')[0]} className='w-[200px] h-[200px] object-cover object-center'/>
                         <div>
@@ -55,7 +56,7 @@ const CartProduct = async (props: Props) => {
                                 className={`h-[30px] w-[30px] text-base`}></div>
                             </div>
                             <h2 className='mb-3 '>Size: {cart[i].size}</h2>
-                            <h2 className='mb-3 '>Quanity: {cart[i].quanity}</h2>
+                            <h2 className='mb-3 '>Số lượng: {cart[i].quanity}</h2>
                         </div>
                     </Link>
                     <div className='absolute right-2'>
@@ -64,7 +65,7 @@ const CartProduct = async (props: Props) => {
                 </div>     
         ))}
         <div className='flex justify-center mt-10'>
-            <Payment allIds={allIds} userId={props.userId}/>
+            <Payment allIds={allIds} allQuanity={allQuanity} userId={props.userId}/>
         </div>
         
     </div>

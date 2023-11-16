@@ -67,9 +67,10 @@ const Info = (props: Props) => {
             onChange={handleChangeQuanity}
                />
         </div>
+        {quanity<props.product.quanity? (
         <div className='flex justify-center mt-10'>
             <AddCart productId={props.product.id} selectedSize={selectedSize} selectedColor={selectedColor} quanity={quanity}/>
-        </div>
+        </div>): (<div></div>)}
     </div>
   )
 }
