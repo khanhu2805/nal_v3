@@ -37,3 +37,14 @@ model Cart {
   color String
   size String
 }
+
+model Purchased {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  productId String 
+  userId String
+  quanity Int
+  color String
+  size String
+  date String
+}
+

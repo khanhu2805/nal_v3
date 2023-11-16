@@ -71,7 +71,7 @@ const AddForm = (props: Props) => {
         .then((res) => console.log(res))
         .catch((err) => console.log(err))
         .finally(() => {
-          router.push(`/product`)
+          router.push(`/product/`)
         });
         
     }

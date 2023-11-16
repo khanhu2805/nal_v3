@@ -73,7 +73,7 @@ const Edit = (props: Props) => {
       handleImageChange();
       try {
         const res = await axios.patch('/api/updateProduct', formData)
-        router.push(`/product`)
+        router.push(`/product/${props.product.id}`)
         console.log(res.data)
       } catch (error) {
         console.log(error)
