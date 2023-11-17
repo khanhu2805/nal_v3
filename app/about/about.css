@@ -1,3 +1,5 @@
+
+
 * {
     padding: 0;
     margin: 0;
@@ -152,7 +154,9 @@
      }
   
      .saCarousel__article ul{
-        padding-bottom: 20px;
+
+      padding-bottom: 20px;
+
      }
   
      /* end saCarousel  */
@@ -455,7 +459,9 @@
     
   
     .portfolio__overlay{
-        position: absolute;
+
+      position: absolute;
+
       top: 0;
       left: 0;
       width: 100%;
@@ -615,8 +621,7 @@
     padding: 30px 15px 20px 15px;
     line-height: 1.4;
     margin-bottom: 20px;
-}
-  
+
 .blog__body h3 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -647,3 +652,4 @@
 .blog__footer p:first-of-type span {
   color: #f55f8d;
 }
+
