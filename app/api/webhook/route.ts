@@ -29,7 +29,6 @@ export async function POST(req: Request, res: Response) {
         const month = today.getMonth()+1;
         const year = today.getFullYear();
         const date = today. getDate();
-        const currentDate = month + "/" + date + "/" + year;
         if (purchaseId) {
             const jsonArr = JSON.parse(purchaseId)
             if (Array.isArray(jsonArr)) {

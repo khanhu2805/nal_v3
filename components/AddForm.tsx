@@ -107,6 +107,7 @@ const AddForm = (props: Props) => {
                 type='number'
                 className='w-full h-[50px] border-[1px] rounded-lg focus:border-orange-500 px-3 focus:border-2 outline'
                 name='price'
+                min={0}
                 value={formData.price}
                 onChange={hanldePriceChange}
                 />
@@ -139,6 +140,7 @@ const AddForm = (props: Props) => {
                 type='number'
                 className='w-full h-[50px] border-[1px] rounded-lg focus:border-orange-500 px-3 focus:border-2 outline'
                 name='quanity'
+                min={0}
                 value={formData.quanity}
                 onChange={hanldePriceChange}
                 />
