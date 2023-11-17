@@ -76,6 +76,7 @@ function App() {
     <section className="aboutUs section-inner">
       <div className="container">
         <div className="aboutUs__content">
+
           <div
             className="aboutUs__left wow animate__ animate__fadeInLeft animated"
             data-wow-duration="2s"
@@ -158,9 +159,9 @@ function App() {
       <div className="container">
         <div className="features__content">
           <div className="features__left">
-            <div
-              className="title wow animate__ animate__fadeInLeft animated"
-              data-wow-duration="2s"
+
+            <div className="title wow animate__ animate__fadeInLeft animated" data-wow-duration="2s"
+
               data-wow-delay="0.2s"
               style={{
                 visibility: 'visible',
@@ -238,7 +239,7 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
+        </div>
     </section>
 
     <section className="portfolio section-inner">
