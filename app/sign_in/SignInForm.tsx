@@ -51,7 +51,6 @@ const SignInForm = (props: Props) => {
                     type="text"
                     value={user.phone}
                     onChange={(e) => setUser({...user, phone:e.target.value})}
-                
                     required
                     className="outline-none  block w-full rounded-md p-1.5 text-gray-900 shadow-sm border-[2px] placeholder:text-gray-400 focus:border-2 focus:border-orange-500 sm:text-sm sm:leading-6"
                   />
@@ -67,7 +66,6 @@ const SignInForm = (props: Props) => {
                     name=""
                     type="password"
                     onChange={(e) => setUser({...user, password:e.target.value})}
-                  
                     required
                     className="outline-none  block w-full rounded-md p-1.5 text-gray-900 shadow-sm border-[2px] placeholder:text-gray-400 focus:border-2 focus:border-orange-500 sm:text-sm sm:leading-6"
                   />

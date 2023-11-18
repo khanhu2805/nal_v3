@@ -39,7 +39,7 @@ const SignUpForm = (props: Props) => {
             <img
               className="mx-auto h-20 w-auto"
               src="./assets/logo.png"
-              alt="Your Company"  
+              alt="NAL"  
             />
             <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
               ĐĂNG KÝ
@@ -57,9 +57,7 @@ const SignUpForm = (props: Props) => {
                     id="name"
                     name=""
                     type="text"
-                    value={user.name}
                     onChange={(e) => setUser({...user, name:e.target.value})}
-                
                     required
                     className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-400 sm:text-sm sm:leading-6"
                   />
@@ -74,14 +72,25 @@ const SignUpForm = (props: Props) => {
                   <input
                     id="phone"
                     name=""
-                    type="text"
-                    value={user.phone}
+                    type='text'
+                    placeholder={user.phone}
                     onChange={(e) => setUser({...user, phone:e.target.value})}
-                
+                    minLength={10}
+                    maxLength={10}
                     required
-                    className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-400 sm:text-sm sm:leading-6"
+                    className="placeholder:font-extralight block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-400 sm:text-sm sm:leading-6"
                   />
                 </div>
+                {user.phone.length<10? (
+                <div>
+                  <h3 className='text-red-500 flex justify-end'>NHẬP THIẾU SỐ ĐIỆN THOẠI</h3>
+                </div>)
+                :(<div></div>)}
+                {user.phone.at(0) != '0'? (
+                <div>
+                  <h3 className='text-red-500 flex justify-end'>NHẬP SAI ĐỊNH DẠNG SỐ ĐIỆN THOẠI</h3>
+                </div>)
+                :(<div></div>)}
               </div>
               <div>
                 <label htmlFor="" className="block text-sm font-medium leading-6 text-gray-900">
@@ -93,11 +102,15 @@ const SignUpForm = (props: Props) => {
                     name=""
                     type="password"
                     onChange={(e) => setUser({...user, password:e.target.value})}
-                  
+                    minLength={6}
                     required
                     className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-400 sm:text-sm sm:leading-6"
                   />
-                 
+                  {user.password.length<6 ? (
+                <div>
+                  <h3 className='text-red-500 flex justify-end'>PASSWORD PHẢI TRÊN 6 KÍ TỰ</h3>
+                </div>)
+                :(<div></div>)}
                 </div>
               </div>
 
@@ -105,7 +118,8 @@ const SignUpForm = (props: Props) => {
               <div>
                 <button
                   onClick={Register}
-                  className="flex w-full justify-center rounded-md bg-orange-400 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400"
+                  disabled={user.name.length==0 || user.phone.length<10 || user.phone.at(0)!= '0' || user.password.length<6}
+                  className={`${user.name.length==0 || user.phone.length<10 || user.phone.at(0)!= '0' || user.password.length<6 ? 'cursor-not-allowed':''} flex w-full justify-center rounded-md bg-orange-400 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400`}
                 >
                   ĐĂNG KÝ
                 </button>
