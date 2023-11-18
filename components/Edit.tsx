@@ -25,7 +25,7 @@ const Edit = (props: Props) => {
         img:props.product.img,
         category:props.product.category
     })
-    const[desc, setDesc] = useState<string>('');
+    const[desc, setDesc] = useState<string>(props.product.desc);
     const[info, setInfo] = useState<any>();
     const[imageUrls, setImageUrls] = useState<string[]>([]);
     useEffect(() => {
@@ -68,6 +68,17 @@ const Edit = (props: Props) => {
         desc:desc
       }))
     }, [imageUrls, desc]);
+
+    const deleteData = async () => {
+      try {
+        axios.delete('/api/delete_product', {data: {id: formData.id}})
+        .then((res) => console.log(res.data))
+        .finally(() => router.push('/product'))
+      }
+      catch (err) {
+        console.log(err)
+      }
+    }
 
     const updateData = async () => {
       handleImageChange();
@@ -160,8 +171,9 @@ const Edit = (props: Props) => {
                 <Para setDesc={setDesc} desc ={desc}/>
             <label htmlFor='desc' className='inline-block mt-10 font-medium'>HÌNH ẢNH SẢN PHẨM</label>
             <ImageUpload info={info} setInfo={setInfo} imageUrls={imageUrls} setImageUrls={setImageUrls} handleImageChange={handleImageChange}/>
-            <div className="w-full text-center">
+            <div className="flex justify-center space-x-20">
               <button onClick={updateData} className='text-black bg-orange-500 px-5 py-2 rounded-lg border-[1px] shadow-md text-xl font-semibold hover:text-white mt-10'>CẬP NHẬT SẢN PHẨM</button>
+              <button onClick={deleteData} className='text-black bg-orange-500 px-5 py-2 rounded-lg border-[1px] shadow-md text-xl font-semibold hover:text-white mt-10'>XÓA SẢN PHẨM</button>
             </div>
         </div>
     </div>
