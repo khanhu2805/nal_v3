@@ -9,8 +9,9 @@ import React from 'react'
 
 const Navbar = () => {
     const {data:session} = useSession();
-    if (usePathname().startsWith('/sign_in')) return null;
-    if (usePathname().startsWith('/sign_up')) return null;
+    const path = usePathname()
+    if (path.startsWith('/sign_in') ) return null;
+    if (path.startsWith('/sign_up')) return null;
     //console.log(session.user.name)
         
         if (session && session.user.name ==='admin') {
