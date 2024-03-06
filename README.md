@@ -1,4 +1,7 @@
- npm install axiosThis is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<img width="1000" alt="Screenshot 2024-03-04 212814" src="https://github.com/khanhu2805/nal_v3/assets/91420210/76a4c801-b57b-4bac-be1f-66a2712f0067">
+<img width="1000" alt="Screenshot 2024-03-04 212827" src="https://github.com/khanhu2805/nal_v3/assets/91420210/6951e155-240e-44ab-95fa-f2648dcf9d72">
+<img width="1000" alt="Screenshot 2024-03-04 212857" src="https://github.com/khanhu2805/nal_v3/assets/91420210/3a5f847b-9c71-4849-8822-9b79b5d8fb3c">
+ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
