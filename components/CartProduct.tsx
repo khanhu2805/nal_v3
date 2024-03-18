@@ -60,7 +60,7 @@ const CartProduct = async (props: Props) => {
                         </div>
                     </Link>
                     <div className='absolute right-2'>
-                        <Delete productId={product.id} userId={props.userId}/>
+                        <Delete id = {cart[i].id}/>
                     </div>
                 </div>     
         ))}

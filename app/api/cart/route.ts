@@ -45,13 +45,12 @@ export async function POST (req: Request, res: Response) {
 
 export async function DELETE(req: Request, res: Response) {
     const body = await req.json()
-    const {productId, userId} = body
+    const {id} = body
     
     try {
-        const deleteCart = await prisma.cart.deleteMany({
+        const deleteCart = await prisma.cart.delete({
             where:{
-                productId,
-                userId
+                id : id,
             }
         })
         return NextResponse.json(deleteCart)

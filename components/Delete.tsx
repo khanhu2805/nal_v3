@@ -4,8 +4,7 @@ import { useRouter } from 'next/navigation'
 import React from 'react'
 
 type Props = {
-    productId: string,
-    userId: string,
+    id: string
 }
 
 const Delete = (props: Props) => {
@@ -14,8 +13,7 @@ const Delete = (props: Props) => {
         try {
             await axios.delete('api/cart', {
                 data: {
-                    productId: props.productId,
-                    userId: props.userId
+                    id : props.id
                 }
             })
             router.refresh( )
