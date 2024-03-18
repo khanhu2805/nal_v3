@@ -69,7 +69,7 @@ const Info = (props: Props) => {
         </div>
         {quanity<props.product.quanity? (
         <div className='flex justify-center mt-10'>
-            <AddCart productId={props.product.id} selectedSize={selectedSize} selectedColor={selectedColor} quanity={quanity}/>
+            <AddCart productId={props.product.id} selectedSize={selectedSize} selectedColor={selectedColor} quanity={quanity} text="THÊM VÀO GIỎ HÀNG"/>
         </div>): (<div></div>)}
     </div>
   )

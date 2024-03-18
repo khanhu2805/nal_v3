@@ -45,7 +45,7 @@ const CartProduct = async (props: Props) => {
         {cartProduct.map((product, i) => (
                 <div key={i} className='flex relative items-center mt-20 w-8/12 mx-auto shadow-xl p-5 rounded-xl border-[1px]'>
                     <Link className='flex relative space-x-5 items-center' href={`/product/${product.id}`}>
-                        <img src={product.img.split(',')[0]} className='w-[200px] h-[200px] object-cover object-center'/>
+                        <img src={product.img.split(',')[0]} className='w-[200px] h-[200px] object-cover object-center rounded-xl'/>
                         <div>
                             <h1 className='text-2xl mb-3'>{product.name}</h1>
                             <h2 className='mb-3 '>Giá: {numberWithCommas(product.price)}</h2>
