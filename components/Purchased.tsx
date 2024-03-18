@@ -4,7 +4,8 @@ import prisma from '@/app/prismadb'
 import Link from 'next/link'
 import numberWithCommas from '@/number_commas'
 import AddCart from './AddCart'
-import Product from '@/app/prototype/Product'
+import Product from '@/app/prototype/product'
+
 type Props = {
     userId:string
 }
