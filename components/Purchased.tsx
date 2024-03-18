@@ -9,7 +9,7 @@ type Props = {
     userId:string
 }
 
-const Purchased = async(props: Props) => {
+const Purchased = async (props: Props) => {
     const purchasedProduct = await prisma.purchased.findMany({
         where: {
             userId:props.userId
