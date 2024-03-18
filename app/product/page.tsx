@@ -1,4 +1,3 @@
-'use client'
 import ProductCard from "@/components/ProductCard";
 import SearchBar from "@/components/SearchBar";
 import Filter from "@/components/Filter";
