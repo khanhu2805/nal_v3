@@ -41,7 +41,6 @@ const CartProduct = async (props: Props) => {
   return (
     
     <div className='flex flex-col mb-10'>
-        
         {cartProduct.map((product, i) => (
                 <div key={i} className='flex relative items-center mt-20 w-8/12 mx-auto shadow-xl p-5 rounded-xl border-[1px]'>
                     <Link className='flex relative space-x-5 items-center' href={`/product/${product.id}`}>
