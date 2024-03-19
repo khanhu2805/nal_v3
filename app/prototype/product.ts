@@ -1,4 +1,4 @@
-import IPrototype from "./prototype";
+import IPrototype from "./IPrototype";
 
 export default class Product implements IPrototype {
     public productId: string;
