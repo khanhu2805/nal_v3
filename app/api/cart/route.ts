@@ -45,7 +45,7 @@ export async function POST (req: Request, res: Response) {
 
 export async function DELETE(req: Request, res: Response) {
     const body = await req.json()
-    const {id} = body
+    const { id } = body;
     
     try {
         const deleteCart = await prisma.cart.delete({
@@ -58,5 +58,22 @@ export async function DELETE(req: Request, res: Response) {
     catch(err) {
         console.log('error delete cart', err)
         return NextResponse.error()
+    }
+}
+
+export async function GET(req: Request, res: Response) {
+    try {
+        const searchParams = new URLSearchParams(req.url.split('?')[1]);
+        const id = searchParams.get('id');
+        const numberCart = await prisma.cart.count({
+            where:{
+                userId: id,
+            }
+        })
+        return NextResponse.json(numberCart)
+    }
+    catch(err) {
+        console.log('error get number of cart', err)
+        return NextResponse.error();
     }
 }
