@@ -15,31 +15,20 @@ function App() {
       <div className="saCarousel__content">
         <div className="saCarousel__left">
           <div className="title">
-            <p className="animate__animated animate__fadeInUp">We are The Best</p>
-            <h2 className="animate__animated animate__fadeInUp animate__delay-1s">Be Yourself We Are The Best</h2>
+            <p className="animate__animated animate__fadeInUp">NAL STORE</p>
+            <h2 className="animate__animated animate__fadeInUp animate__delay-1s">Nơi Khơi Gợi Phong Cách Của Bạn</h2>
           </div>
           <div className="saCarousel__article">
             <p className="animate__animated animate__fadeInUp animate__delay-2s">
-              We develop the relationships that underpin the next phase in your <br /> organization’s growth.
+            Luôn là điểm đến lý tưởng cho những ai yêu thích thời trang và mong muốn thể hiện cá tính riêng của bản thân. Chúng tôi cung cấp đa dạng các mặt hàng quần áo cho cả nam và nữ, từ phong cách năng động, trẻ trung đến thanh lịch, sang trọng.  <br />
             </p>
-            <ul className="animate__animated animate__fadeInUp animate__delay-3s">
-              <li>
-              <i className="fa fa-check-circle"></i>
-              We have a check icon
-              </li>
-              <li>
-                <i className="fa fa-check"></i>
-                We have a check icon
-              </li>
-            </ul>
-            <button className="btn-gradient animate__animated animate__fadeInUp animate__delay-4s">
-              GET STARTED
-            </button>
+            
+           
           </div>
         </div>
         <div className="saCarousel__right">
           <div className="saCarousel__banner animate__animated animate__fadeInUp animate__delay-3s">
-            <img src='./assets/pic1_3.jpg' />
+            <img src='./assets/aboutus_1.webp' />
           </div>
         </div>
       </div>
@@ -48,26 +37,27 @@ function App() {
   <section className="services section-inner">
       <div className="container">
         <div className="title">
-          <p>What We Do Best</p>
-          <h2>Our Digital Services</h2>
+          <h2>Các Sản Phẩm Nổi Bật</h2>
         </div>
         <div className="services__content">
           <div className="services__item">
-            <img src='./assets/pic1_3.jpg' alt="Web Development" />
-            <h3>Web Development</h3>
-            <p>Vestibulum a efficitur ex. Ut iaculis dapibus iaculis. Praesent lacus magna, rhoncus quis magna quis.</p>
+            <img src='./assets/aboutus_2.webp' alt="Web Development" />
+            <h3>Áo</h3>
+            <p>Chất liệu áo đa dạng, từ cotton mềm mại, thoáng mát đến poly bền đẹp, dễ giặt ủi, hay nỉ ấm áp, len giữ nhiệt tốt,... đáp ứng mọi nhu cầu của bạn.
+
+</p>
           </div>
 
           <div className="services__item">
-            <img src='./assets/pic2_2.jpg'alt="Strategy & Research" />
-            <h3>Strategy &amp; Research</h3>
-            <p>Vestibulum a efficitur ex. Ut iaculis dapibus iaculis. Praesent lacus magna, rhoncus quis magna quis.</p>
+            <img src='./assets/aboutus_3.webp'alt="Strategy & Research" />
+            <h3>Quần</h3>
+            <p>Chất liệu quần phong phú, từ cotton mềm mại đến kaki dày dặn, denim cá tính, nỉ ấm áp,.. mang đến trải nghiệm mặc thoải mái và thời trang.</p>
           </div>
 
           <div className="services__item">
-            <img src='./assets/pic3_2.jpg'alt="Growth Tracking" />
-            <h3>Growth Tracking</h3>
-<p>Vestibulum a efficitur ex. Ut iaculis dapibus iaculis. Praesent lacus magna, rhoncus quis magna quis.</p>
+            <img src='./assets/aboutus_4.png'alt="Growth Tracking" />
+            <h3>Giày Dép</h3>
+            <p>Chất liệu đa dạng từ da cao cấp, da lộn mềm mại đến vải canvas thoáng mát, đế cao su êm ái, đảm bảo sự thoải mái và thời trang cho bạn.</p>
           </div>
         </div>
       </div>
@@ -82,7 +72,7 @@ function App() {
             data-wow-duration="2s"
             data-wow-delay="0.2s"
           >
-            <img src='./assets/pic1.jpg'  />
+            <img src='./assets/aboutus_5.webp'  />
           </div>
           <div
             className="aboutUs__right wow animate__ animate__fadeInRight animated"
@@ -90,70 +80,32 @@ function App() {
             data-wow-delay="0.2s"
           >
             <div className="title">
-              <p>About Us</p>
               <h2>
-                Build Your <br /> Business Website <br /> Better
+                Giá Trị Cốt Lõi Của Chúng Tôi
               </h2>
             </div>
-            <p>
-              Proin laoreet leo vel enim gravida, at porttitor metus ultricies. Cras eu velit enim. Vivamus blandit,
-              dolor ut aliquet rutrum, ex elit mattis sapien, non molestie felis neque et nulla. Sed euismod turpis id nibh
-              suscipit semper. Pellentesque dapibus risus arcu.
-            </p>
+            
             <ul>
               <li>
-                <i className="fa fa-check"></i>We support programs that create advancement opportunities for people.
+                <i className="fa fa-check"></i>Lựa chọn kỹ lưỡng từ nguồn hàng.
               </li>
               <li>
-                <i className="fa fa-check"></i>Get a view of events and trends. Be updated on our recent news.
+                <i className="fa fa-check"></i>Đa dạng trong phong cách.
               </li>
               <li>
-                <i className="fa fa-check"></i>Finally, it all comes down to people. Creating a winning team.
+                <i className="fa fa-check"></i>Cam kết giá thành hợp lý.
               </li>
               <li>
-                <i className="fa fa-check"></i>Get a view of events and trends. Be updated on our recent news.
+                <i className="fa fa-check"></i>Nhân viên luôn nhiệt tình hỗ trợ.
               </li>
             </ul>
-            <button className="btn-gradient">learn more</button>
+            
           </div>
         </div>
       </div>
     </section>
 
-    <section className="number">
-      <div className="container">
-        <div className="number__content">
-          <div className="number__item">
-            <i className="fa fa-smile"></i>
-            <p>
-              <span className="counter">18</span> Ml
-            </p>
-            <p>Satisfied Clients</p>
-          </div>
-          <div className="number__item">
-            <i className="fa fa-chart-line"></i>
-            <p>
-              <span className="counter">20</span> Ml
-            </p>
-            <p>Project Completed</p>
-          </div>
-          <div className="number__item">
-            <i className="fa fa-rocket"></i>
-            <p>
-              <span className="counter">30</span> Ml
-            </p>
-            <p>Project Launched</p>
-          </div>
-          <div className="number__item">
-            <i className="fab fa-angellist"></i>
-            <p>
-              <span className="counter">50</span>
-            </p>
-            <p>Years Completed</p>
-</div>
-        </div>
-      </div>
-    </section>
+
 
     <section className="features section-inner">
       <div className="container">
@@ -170,8 +122,7 @@ function App() {
                 animationName: 'fadeInLeft',
               }}
             >
-              <p>Our Features</p>
-              <h2>Behind The Story <br /> Of Samar Agency</h2>
+              <h2>Sứ Mệnh Của Chúng Tôi</h2>
             </div>
             <div className="features__group">
               <div
@@ -186,10 +137,9 @@ function App() {
                 }}
               >
                 <div className="features__bg">
-                <i className="fa fa-lightbulb"></i>
+                <i className="fa-solid fa-bag-shopping"></i>
                   <div>
-                    <h3>Idea &amp; Analysis Gathering</h3>
-                    <p>Maecenas laoreet efficitur sagittis. Aliquam eleifend nisl leo, sit amet consequat augue.</p>
+                    <p>Mang đến trải nghiệm mua sắm thời trang hoàn hảo.</p>
                   </div>
                 </div>
               </div>
@@ -205,10 +155,9 @@ function App() {
                 }}
               >
                 <div className="features__bg">
-                  <i className="fa fa-laptop-code"></i>
+                <i className="fa-solid fa-heart"></i>
                   <div>
-                    <h3>Design &amp; Developing</h3>
-                    <p>Maecenas laoreet efficitur sagittis. Aliquam eleifend nisl leo, sit amet consequat augue.</p>
+                    <p>Làm khơi dậy niềm đam mê về thời trang.</p>
                   </div>
                 </div>
               </div>
@@ -226,8 +175,7 @@ function App() {
                 <div className="features__bg">
                   <i className="fa fa-rocket"></i>
                   <div>
-                    <h3>Testing &amp; Launching</h3>
-<p>Maecenas laoreet efficitur sagittis. Aliquam eleifend nisl leo, sit amet consequat augue.</p>
+                    <p>Góp phần phát triển của ngành thời trang.</p>
                   </div>
                 </div>
               </div>
@@ -235,67 +183,14 @@ function App() {
           </div>
           <div className="features__right">
             <div className="features__banner">
-              <img src='./assets/pic3.jpg' alt="" />
+              <img src='./assets/aboutus_6.webp' alt="" />
             </div>
           </div>
         </div>
         </div>
     </section>
 
-    <section className="portfolio section-inner">
-      <div className="container">
-        <div className="title">
-          <p>Portfolio</p>
-          <h2>Our Latest Work</h2>
-        </div>
-        <div className="portfolio__content" id="animated-thumbnails">
-          <div className="portfolio__item portfolio__item1 wow animate__ animate__fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
-            <img src='./assets/pic1_2.jpg' alt="" />
-            <div className="portfolio__overlay">
-              <div className="portfolio__icon">
-                <a className="lightimg" data-thumb='./assets/pic1_2.jpg' data-fancybox="gallery" href="./assets/pic1_2.jpg" data-caption="Design 1">
-                  <i className="fa fa-plus"></i>
-                </a>
-              </div>
-              <div className="portfolio__text">
-                <h3>Software Landing</h3>
-                <p>By Jhone Doe</p>
-              </div>
-            </div>
-          </div>
-          <div className="portfolio__item  wow animate__ animate__fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
-            <img src='./assets/pic1_2.jpg' alt="" />
-            <div className="portfolio__overlay">
-              <div className="portfolio__icon">
-                <a className="lightimg" data-thumb="./assets/pic2_1.jpg" data-fancybox="gallery" href="./assets/pic2_1.jpg" data-caption="Design 2">
-                  <i className="fa fa-plus"></i>
-                </a>
-              </div>
-              <div className="portfolio__text">
-                <h3>Software Landing</h3>
-                <p>By Jhone Doe</p>
-              </div>
-            </div>
-          </div>
-          <div className="portfolio__item portfolio__item1 wow animate__ animate__fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
-            <img src='./assets/pic1_2.jpg' alt="" />
-            <div className="portfolio__overlay">
-              <div className="portfolio__icon">
-                <a className="lightimg" data-thumb='.assets/pic1_2.jpg' data-fancybox="gallery" href="./assets/pic1_2.jpg" data-caption="Design 3">
-                  <i className="fa fa-plus"></i>
-                </a>
-              </div>
-              <div className="portfolio__text">
-                <h3>Software Landing</h3>
-                <p>By Jhone Doe</p>
-              </div>
-            </div>
-          </div>
-          
-          {/* ... (Repeat the structure for other portfolio items) */}
-        </div>
-      </div>
-    </section>
+   
 
 
     </div>
