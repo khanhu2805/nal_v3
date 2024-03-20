@@ -29,6 +29,8 @@ export default function ProductSlideShow({products}) {
           modifier: 1,
           slideShadows: true,
         }}
+        loop={true}
+        roundLengths={true}
         pagination={true}
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper1"
