@@ -11,37 +11,42 @@ export async function GET (req: Request) {
         const minPrice = minPriceStr? parseInt(minPriceStr) : undefined
         const maxPrice = maxPriceStr? parseInt(maxPriceStr) : undefined
         const search = searchParams.get('search')
-        const product = await prisma.product.findMany({
-            where: {
-                
-                AND : [
-                    {OR: [
-                        ...category.map((cate) => ({
-                            category: {
-                                contains: cate
-                            }
-                        }))]
-                    },
-                    ...size.map((size) => ({
-                        size: {
-                            contains: size
-                        }
-                    })),
-                    {
-                        price: {
-                            gte:minPrice,
-                            lte:maxPrice
-                        }
-                    }, 
-                    {
-                        name: {
-                            contains: search,
-                            mode: 'insensitive',
-                        },
+        console.log(search)
+        let product;
+        if (search==undefined) {
+            product = await prisma.product.findMany({
+                where: {
+                    AND : [
+                            {OR: [
+                                ...category.map((cate) => ({
+                                    category: {
+                                        contains: cate
+                                    }
+                                }))
+                            ]},
+                            ...size.map((size) => ({
+                                size: {
+                                    contains: size
+                                }
+                            })),
+                            {
+                                price: {
+                                    gte:minPrice,
+                                    lte:maxPrice
+                                }
+                            },
+                        ]},
+            })}
+        else {
+            product = await prisma.product.findMany({
+                where: {
+                    name: {
+                        contains:search,
+                        mode: 'insensitive'
                     }
-                ] 
-            }
-        })
+                }
+            })
+        }
         return NextResponse.json(product);
     }
     catch (err){
