@@ -1,10 +1,11 @@
 'use client'
 import numberWithCommas from '@/number_commas'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import AddCart from './AddCart'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import Payment from './Payment'
+import Buy from './Buy'
 
 type Props = {
     product:any
@@ -18,7 +19,12 @@ const Info = (props: Props) => {
     const [selectedSize, setSelectedSize] = useState<string>(size[0]);
     const [selectedColor, setSelectedColor] = useState<string>(color[0]);
     const [quanity, setQuanity] = useState<number>(1);
-
+    const allIds : string[] = new Array(1);
+    const allQuanity : number[] = new Array(1);
+    allIds[0] = props.product.id;
+    useEffect(() => {
+        allQuanity[0] = quanity
+    }, [quanity, allQuanity])
     const handleChangeQuanity = (e:React.ChangeEvent<HTMLInputElement>) => {
         setQuanity(parseInt(e.target.value));
     }
@@ -35,7 +41,7 @@ const Info = (props: Props) => {
                     </svg>
                 </span>
             </Link>
-        )}
+        )}  
         <div className='flex justify-end mt-10'>
             <h3 className='text-black font-semibold text-lg'>SỐ LƯỢNG SẢN PHẨM: <span className='text-orange-500'>{props.product.quanity}</span></h3>
         </div>
@@ -67,8 +73,9 @@ const Info = (props: Props) => {
             onChange={handleChangeQuanity}
                />
         </div>
-        {quanity<props.product.quanity? (
-        <div className='flex justify-center mt-10'>
+        {quanity<=props.product.quanity && quanity>0? (
+        <div className='flex justify-center space-x-16 mt-10'>
+            <Buy allIds={allIds} allQuanity={allQuanity} userId={currentUserId}/>
             <AddCart productId={props.product.id} selectedSize={selectedSize} selectedColor={selectedColor} quanity={quanity} button_text='THÊM VÀO GIỎ HÀNG'/>
         </div>): (<div></div>)}
     </div>
