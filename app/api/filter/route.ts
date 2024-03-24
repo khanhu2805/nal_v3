@@ -10,14 +10,18 @@ export async function GET (req: Request) {
         const maxPriceStr = searchParams.get('price[max]')
         const minPrice = minPriceStr? parseInt(minPriceStr) : undefined
         const maxPrice = maxPriceStr? parseInt(maxPriceStr) : undefined
+        const search = searchParams.get('search')
         const product = await prisma.product.findMany({
             where: {
-                AND: [
-                    ...category.map((cate) => ({
-                        category: {
-                            contains: cate
-                        }
-                    })),
+                
+                AND : [
+                    {OR: [
+                        ...category.map((cate) => ({
+                            category: {
+                                contains: cate
+                            }
+                        }))]
+                    },
                     ...size.map((size) => ({
                         size: {
                             contains: size
@@ -28,8 +32,14 @@ export async function GET (req: Request) {
                             gte:minPrice,
                             lte:maxPrice
                         }
+                    }, 
+                    {
+                        name: {
+                            contains: search,
+                            mode: 'insensitive',
+                        },
                     }
-                ]   
+                ] 
             }
         })
         return NextResponse.json(product);
