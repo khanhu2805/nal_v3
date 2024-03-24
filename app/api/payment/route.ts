@@ -20,7 +20,6 @@ export async function POST (req: Request) {
     if (!allIds.length || allIds.length === 0) {
         return new NextResponse("Không có sản phẩm", {status:400});
     }
-
     const products = await prisma.product.findMany({
         where: {
             id: {
