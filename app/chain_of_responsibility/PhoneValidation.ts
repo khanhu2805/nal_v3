@@ -14,9 +14,10 @@ export default class PhoneValidation extends Validation {
                     phone: userData.phone
                 }
             })
-            if (phone > 0) return true;
-            return false;
+            console.log(phone)
+            return phone>0
         }
+        
        if(!(userData.phone.length == 10) || !(userData.phone.startsWith("0"))) {
             setErrorData((errorData) => ({
                 ...errorData,
@@ -31,13 +32,13 @@ export default class PhoneValidation extends Validation {
             check: false
         }));
        }
-       else if (phone_exists) {
-        setErrorData((errorData) => ({
-            ...errorData,
-            phone: 'SỐ ĐIỆN THOẠI ĐÃ TỒN TẠI',
-            check: false
-        }));
-       }
+    //    else if (phone_exists) {
+    //     setErrorData((errorData) => ({
+    //         ...errorData,
+    //         phone: 'SỐ ĐIỆN THOẠI ĐÃ TỒN TẠI',
+    //         check: false
+    //     }));
+    //    }
        else {
         setErrorData((errorData) => ({
             ...errorData,
