@@ -83,7 +83,7 @@ const Navbar = () => {
                             <Link href='/about' className='text-black font-bold text-lg hover:text-orange-400'>ABOUT US</Link>
 
                             <div className='border-r-2 border-black'></div>
-                            <Link href='/add_product' className='text-black font-bold text-lg hover:text-orange-400'>ADD</Link>
+                            <Link href='/admin/add_product' className='text-black font-bold text-lg hover:text-orange-400'>ADD</Link>
                             <div className='border-r-2 border-black'></div>
                         </div>
                     </div>

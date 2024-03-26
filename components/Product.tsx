@@ -61,7 +61,7 @@ const Product = () =>{
                     setPrice={setPrice}/>
                 </div>
                 <div className="basis-3/5 grid grid-cols-3 gap-2">
-                    {response.map((product) => (
+                    {response.map((product, i) => (
                         <ProductCard key={product.id} product={product}/>
                     ))}
                 </div>
