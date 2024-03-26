@@ -4,7 +4,7 @@ interface Props  {
     setFormData: React.Dispatch<React.SetStateAction<any>>
 }
 
-const createSizeComponent = (setFormData) => {
+const CreateSizeComponent = (setFormData) => {
     const [selectedSize, setSelectedSize] = useState([]);
     const sizes = ['S', 'M', 'L', 'XL', '2XL', '3XL'];
   
@@ -44,4 +44,4 @@ const createSizeComponent = (setFormData) => {
     );
   };
 
-  export default createSizeComponent
+  export default CreateSizeComponent
